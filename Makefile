@@ -3,7 +3,7 @@ PERCENT := %
 all: .images
 
 .images: out/slides.png
-	convert -crop 33.33333$(PERCENT)x5.0$(PERCENT) $< out/slide_$(PERCENT)03d.png
+	convert -crop 100$(PERCENT)x1200px $< out/slide_$(PERCENT)03d.png
 	touch .images
 
 out/slides.png: src/slides.svg
