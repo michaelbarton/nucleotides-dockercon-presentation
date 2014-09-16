@@ -20,4 +20,4 @@ out/slides.png: src/slides.svg
 		--export-area-page
 
 clean:
-	rm -f out/*
+	rm -rf out/*
