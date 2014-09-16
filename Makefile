@@ -1,10 +1,15 @@
 PERCENT := %
 
-all: .images
+dimensions := "1666.7x1333.3"
 
-.images: out/slides.png
-	convert -crop 100$(PERCENT)x2$(PERCENT) $< out/slide_$(PERCENT)03d.png
-	touch .images
+all: out/slides.pdf
+
+out/slides.pdf: out/pngs
+	convert -page $(dimensions) $</slide_*.png $@
+
+out/pngs: out/slides.png
+	mkdir -p $@
+	convert -crop $(dimensions) $< $@/slide_$(PERCENT)03d.png
 
 out/slides.png: src/slides.svg
 	mkdir -p $(dir $@)
@@ -15,4 +20,4 @@ out/slides.png: src/slides.svg
 		--export-area-page
 
 clean:
-	rm -f *.png .images
+	rm -f out/*
