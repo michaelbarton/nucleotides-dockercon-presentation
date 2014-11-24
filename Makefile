@@ -1,6 +1,6 @@
 PERCENT := %
 
-dimensions := "1666.7x1333.3"
+dimensions := "1333.3333x750"
 
 all: out/slides.pdf
 
