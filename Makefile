@@ -13,7 +13,7 @@ out/pngs: out/slides.png
 
 out/slides.png: src/slides.svg
 	mkdir -p $(dir $@)
-	~/Applications/Inkscape.app/Contents/Resources/bin/inkscape \
+	inkscape \
 		--file=$< \
 		--export-dpi=100 \
 		--export-png=$@ \

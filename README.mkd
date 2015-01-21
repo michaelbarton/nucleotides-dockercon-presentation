@@ -1,0 +1,11 @@
+Repository for [nucleotid.es](http://nucleotid.es) presentation. To build the
+slides you will need [Inkscape](https://inkscape.org) and
+[ImageMagick](http://www.imagemagick.org/) installed and available on your
+$PATH.
+
+The presentation was made in Inkscape and can be built by typing `make`. This
+will run the following processes:
+
+  * Generate very large PNG file from the SVG.
+  * Split large PNG into individual slides.
+  * Create PDF from individual PNGs.
