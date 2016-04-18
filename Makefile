@@ -14,9 +14,9 @@ out/pngs: out/slides.png
 out/slides.png: src/slides.svg
 	mkdir -p $(dir $@)
 	inkscape \
-		--file=$< \
+		--file=$(abspath $<) \
 		--export-dpi=100 \
-		--export-png=$@ \
+		--export-png=$(abspath $@) \
 		--export-area-page
 
 clean:
